@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tracking Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="map-container">
+        <div id="map"></div>
+        <button onclick="location.href='dashboard.html'">Back to Dashboard</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const socket = io("http://192.168.0.102:5000");
+        socket.on("connect", () => console.log("WebSocket Connected"));
+        socket.on("disconnect", () => console.log("WebSocket Disconnected"));
+        socket.on("connect_error", (error) => console.error("WebSocket Error:", error));
+    </script>
+</body>
+</html>

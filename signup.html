@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="Role">Role label</label>
+            <select id="role" name="role" required>
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+                <option value="driver">Driver</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit" id="signupButton" arial-label="Sign Up">Sign Up</button> <!--Ensure the type is submit-->
+        </form>
+        <p>Already have an account?
+            <a href="index.html">Login here</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

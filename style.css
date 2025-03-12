@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* General page styling */
+.page-container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+/* heading */
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+/* paragraph */
+P {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+/* Back button */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.back-button:hover {
+    background-color: #0056b3;
+}
+#menuButton {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#menu {
+    display: none;
+    background: white;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+#menu.active {
+    display: block;
+}
+#menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#menu button:hover {
+    background: #0056b3;
+}
+
+
+/* Login & Dashboard */
+.login-container, .signup-container, .dashboard-container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Disable Buttons (In case of validation issues) */
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Map Page */
+.map-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+/* Sign-Up page Link */
+.signup-link {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+.signup-link:hover {
+    text-decoration: underline;
+}
+/* Responsiveness styles for mobile */
+@media (max-width: 786px) {
+    body {
+        font-size: 18px; /* increase overall font-size */
+    }
+    .page-container,
+    .login-container,
+    .signup-container,
+    .dashboard-container {
+        width: 90%; /* Use more screen space on smaller screen */
+        max-width: none; /* Remove max-width limitation */
+        padding: 25px; /* Add more padding for better spacing */
+    }
+    h2 {
+        font-size: 22px; /* Make headings larger */
+    }
+    p {
+        font-size: 18px; /* Increase paragraph text-size */
+        line-height: 1.6; /* Improve readability */
+    }
+    button, .back-button {
+        font-size: 18px; /* Make button easier to read */
+        padding: 12px; /* Increase button padding */
+    }
+    input, select {
+        font-size: 18px; /* Increase form iput text size */
+        padding: 12px; /* Add more padding */
+    }
+    #menu {
+        top: 60px; /* Adjust menu position */
+        left: 5px; /*Adjust menu placement */
+    }
+}
