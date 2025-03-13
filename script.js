@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
               const user = { name, email, password, role };
           localStorage.setItem("user", JSON.stringify(user));
           alert("sign-up successful! Redirecting to login...");
-          window.location.href = "index.html"; //Redirect to login 
+          window.location.href = "login.html"; //Redirect to login 
       } else {
           alert("please fill in all fields.");
       }
