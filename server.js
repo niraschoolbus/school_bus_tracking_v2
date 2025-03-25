@@ -17,7 +17,11 @@ const io = socketIo(server, {
 });
 const SECRET_KEY = process.env.SECRET_KEY || "your_secret_key";
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, "0.0.0.0", () => {
+//Test Route 
+app.get('/test', (req, res) => {
+    res.send('Backend is working!');
+});
+app.listen(PORT,  () => {
     console.log(`Server running on port ${PORT}`);
 });
 
@@ -177,5 +181,5 @@ app.get("/", (req, res) => {
 
 // *START SERVER*
 server.listen(PORT, () => {
-    console.log(` Server running on http://192.168.0.102:${PORT}`);
+    console.log(`Server running on port${PORT}`);
 });
