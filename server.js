@@ -16,7 +16,7 @@ const io = socketIo(server, {
     }
 });
 const SECRET_KEY = process.env.SECRET_KEY || "your_secret_key";
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 //Test Route 
 app.get('/test', (req, res) => {
     res.send('Backend is working!');
